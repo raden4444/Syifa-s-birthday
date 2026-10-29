@@ -1,0 +1,299 @@
+/* Reset & Base Styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Latar belakang kamar Toy Story */
+    background: url('./images/room-background.jpg') center/cover no-repeat fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Comic Sans MS', 'Poppins', cursive, sans-serif;
+    padding: 20px;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Karakter di Sisi Kiri */
+.character-woody-left {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.character-alien-left {
+    position: fixed;
+    left: 20px;
+    bottom: 0;
+    width: 170px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Karakter di Sisi Kanan */
+.character-buzz-right {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 280px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.character-jessie-right {
+    position: fixed;
+    right: 20px;
+    bottom: 110px;
+    width: 190px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Header Judul */
+.header {
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    margin-bottom: 25px;
+    z-index: 10;
+}
+
+.header h1 {
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.header h2 {
+    font-size: 2.2rem;
+    color: #ffeb3b;
+    margin: 5px 0;
+}
+
+.header p {
+    font-size: 0.95rem;
+    opacity: 0.95;
+}
+
+/* Layout Kontainer Utama */
+.main-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 900px;
+    width: 100%;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Gaya Kartu Krem */
+.card {
+    background: #fffdf5;
+    border: 3px solid #f0d5a3;
+    border-radius: 22px;
+    padding: 25px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Kartu Kiri (Scanner) */
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.card-header .icon {
+    font-size: 1.8rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    color: #1a237e;
+    font-size: 1.1rem;
+}
+
+.card-header p {
+    margin: 0;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    background: #000;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.status-box {
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #2e7d32;
+    font-size: 0.9rem;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-primary {
+    background: #4a54e1;
+    color: white;
+}
+
+.btn-primary:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: #ff4081;
+    color: white;
+    margin-top: 15px;
+}
+
+.tip {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Kartu Kanan (Greeting) */
+.greeting-card {
+    text-align: center;
+    justify-content: center;
+}
+
+.greeting-title {
+    font-size: 1.4rem;
+    color: #1a237e;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.greeting-subtitle {
+    font-size: 1.3rem;
+    color: #d81b60;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.cake-container {
+    margin: 15px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.cake-emoji {
+    font-size: 4rem;
+}
+
+.age-badge {
+    position: absolute;
+    bottom: 0;
+    right: -5px;
+    background: #ff5722;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 2px solid white;
+}
+
+.target-name-text {
+    font-weight: bold;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+.greeting-desc {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #444;
+}
+
+.special-title {
+    color: #1565c0;
+    margin: 10px 0 5px 0;
+}
+
+.heart-icon {
+    font-size: 1.3rem;
+}
+
+.message-placeholder {
+    padding: 20px 0;
+    color: #777;
+    font-style: italic;
+    font-size: 0.9rem;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Animasi Konfeti */
+.confetti {
+    position: fixed;
+    top: -20px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 999;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(105vh) rotate(360deg);
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syifa’s Birthday Celebration</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Library Face-API.js -->
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+
+    <!-- Header Judul Utama -->
+    <header class="header">
+        <h1>Happy Birthday</h1>
+        <h2>⭐ MY SLEEPY DINOSORRR ⭐</h2>
+        <p>Healthy, happy, and full of joy!</p>
+    </header>
+
+    <!-- Kontainer Utama (2 Kartu Sejajar) -->
+    <main class="main-container">
+        
+        <!-- KARTU KIRI: Kamera & Scanner -->
+        <section class="card">
+            <div class="card-header">
+                <span class="icon">📷</span>
+                <div>
+                    <h3>Cheese!</h3>
+                    <p>Sayang, turn on the camera please</p>
+                </div>
+            </div>
+
+            <!-- Area Video Kamera -->
+            <div class="video-container">
+                <video id="video" autoplay muted playsinline></video>
+                <canvas id="overlay"></canvas>
+            </div>
+
+            <div class="status-box">
+                <span id="status">Memuat model AI...</span>
+            </div>
+
+            <button id="start-button" class="btn btn-primary" disabled>
+                📷 Mulai Kamera
+            </button>
+
+            <p class="tip">💡 Pastikan wajahmu terlihat jelas di dalam kotak.</p>
+        </section>
+
+        <!-- KARTU KANAN: Ucapan Ulang Tahun -->
+        <section class="card greeting-card">
+            <div class="greeting-title">My sweetheart</div>
+            <div class="greeting-subtitle"></div>
+
+            <!-- Ilustrasi Kue -->
+            <div class="cake-container">
+                <div class="cake-emoji">🎂</div>
+                <div id="target-age" class="age-badge">20</div>
+            </div>
+
+            <!-- Pesan Tersembunyi (Sebelum & Sesudah Cocok) -->
+            <div id="birthday-message" class="message-content hidden">
+                <p id="target-name" class="target-name-text"></p>
+                <p class="greeting-desc">
+                    Mata mu yang berbinar, bibirmu yang cantik, dan pipi mu yang merah muda. di-20 ini, aku harap Tuhan selalu melimpahkan seluruh indah kepada mu.
+                <h4 class="special-title">Much love,</h4>
+                <br> <p>- sharkie -</p>
+                <div class="heart-icon">🤍</div>
+                
+                <button id="replay-button" class="btn btn-secondary">
+                    🎉 Rayakan Lagi!
+                </button>
+            </div>
+
+            <!-- Placeholder Awal -->
+            <div class="message-placeholder">
+                <p>🔒 Turn on the camera and scan ur pretty face! something will appear</p>
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="birthday-music" src="music/birthday.mp3" preload="auto"></audio>
+
+</body>
+</html>
